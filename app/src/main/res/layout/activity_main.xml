@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000"
+    tools:context="com.example.yeji.robotbucks.MainActivity">
+
+    <ImageButton
+        android:id="@+id/user"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:background="@null"
+        app:srcCompat="@drawable/user"
+        android:scaleType="fitCenter"
+        android:layout_marginTop="15dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginRight="15dp" />
+
+    <RelativeLayout
+        android:layout_width="250dp"
+        android:layout_height="300dp"
+        android:layout_gravity = "center"
+        android:gravity = "center"
+        android:layout_below="@+id/user"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="35dp"
+        android:id="@+id/relativeLayout2">
+
+        <ImageButton
+            android:id="@+id/coffeeButton"
+            android:layout_alignParentTop = "true"
+            android:layout_alignParentLeft="true"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:background="@null"
+            app:srcCompat="@drawable/pic3"
+            android:scaleType="fitCenter"
+            />
+
+        <TextView
+            android:layout_width="80dp"
+            android:layout_height="20dp"
+            android:text="Menu"
+            android:textColor="#FFFFFF"
+            android:textSize="20dp"
+            android:gravity="center"
+            android:layout_below="@id/coffeeButton"
+            android:layout_marginTop="15dp"
+            />
+
+        <ImageButton
+            android:id="@+id/robotButton"
+            android:layout_alignParentTop = "true"
+            android:layout_alignParentRight="true"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:background="@null"
+            app:srcCompat="@drawable/robott"
+            android:scaleType="fitCenter"
+            android:layout_alignTop="@+id/coffeeButton"
+            />
+
+        <TextView
+            android:layout_width="80dp"
+            android:layout_height="20dp"
+            android:layout_alignParentRight="true"
+            android:text="Robot Call"
+            android:textColor="#FFFFFF"
+            android:textSize="20dp"
+            android:gravity="center"
+            android:layout_below="@id/robotButton"
+            android:layout_marginTop="15dp"
+            />
+
+        <ImageButton
+            android:id="@+id/presentButton"
+            android:layout_alignParentLeft="true"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:background="@null"
+            app:srcCompat="@drawable/pic1"
+            android:scaleType="fitCenter"
+            android:layout_below="@+id/coffeeButton"
+            android:layout_marginTop="80dp"
+            />
+
+        <TextView
+            android:layout_width="80dp"
+            android:layout_height="20dp"
+            android:layout_alignParentLeft="true"
+            android:text="Event"
+            android:textColor="#FFFFFF"
+            android:textSize="20dp"
+            android:gravity="center"
+            android:layout_below="@id/presentButton"
+            android:layout_marginTop="15dp"
+            />
+
+        <ImageButton
+            android:id="@+id/security"
+            android:layout_alignParentRight="true"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:background="@null"
+            app:srcCompat="@drawable/pic4"
+            android:scaleType="fitCenter"
+            android:layout_below="@id/robotButton"
+            android:layout_marginTop="80dp"
+            />
+
+        <TextView
+            android:layout_width="80dp"
+            android:layout_height="20dp"
+            android:layout_alignParentRight="true"
+            android:text="My Page"
+            android:textColor="#FFFFFF"
+            android:textSize="20dp"
+            android:gravity="center"
+            android:layout_below="@id/security"
+            android:layout_marginTop="15dp" />
+
+        />
+
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000"
+    tools:context="com.example.yeji.robotbucks.ProgressActivity">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="80dp"
+        android:background="@null"
+        android:padding="0sp"
+        android:scaleType="centerCrop"
+        app:srcCompat="@drawable/robotbucks" />
+
+    <ImageView
+        android:id="@+id/circle1"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_centerVertical="true"
+        android:layout_marginEnd="30dp"
+        android:layout_toStartOf="@+id/imageView"
+        app:srcCompat="@drawable/gray_circle" />
+
+    <TextView
+        android:id="@+id/text1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/circle2"
+        android:layout_toEndOf="@+id/circle1"
+        android:text="Coffee Ordered"
+        android:textColor="#FFFFFF"
+        android:textSize="20dp"/>
+
+    <ImageView
+        android:id="@+id/circle2"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_centerVertical="true"
+        android:layout_marginEnd="30dp"
+        android:layout_toStartOf="@+id/imageView"
+        android:layout_below="@id/circle1"
+        android:layout_marginTop="30dp"
+        app:srcCompat="@drawable/gray_circle" />
+
+    <TextView
+        android:id="@+id/text2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/circle3"
+        android:layout_toEndOf="@+id/circle2"
+        android:text="Coffee Preparing"
+        android:textColor="#FFFFFF"
+        android:textSize="20dp"/>
+
+    <ImageView
+        android:id="@+id/circle3"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_centerVertical="true"
+        android:layout_marginEnd="30dp"
+        android:layout_toStartOf="@+id/imageView"
+        android:layout_below="@id/circle2"
+        android:layout_marginTop="30dp"
+        app:srcCompat="@drawable/gray_circle" />
+
+    <TextView
+        android:id="@+id/text3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/circle4"
+        android:layout_toEndOf="@+id/circle3"
+        android:text="Coffee Delivering"
+        android:textColor="#FFFFFF"
+        android:textSize="20dp"/>
+
+    <ImageView
+        android:id="@+id/circle4"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_centerVertical="true"
+        android:layout_marginEnd="30dp"
+        android:layout_toStartOf="@+id/imageView"
+        android:layout_below="@id/circle3"
+        android:layout_marginTop="30dp"
+        app:srcCompat="@drawable/gray_circle" />
+
+    <TextView
+        android:id="@+id/text4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/text3"
+        android:layout_toEndOf="@+id/circle4"
+        android:layout_marginTop="32dp"
+        android:text="Ordered Finished"
+        android:textColor="#FFFFFF"
+        android:textSize="20dp"/>
+
+    <!--<ListView-->
+        <!--android:id="@+id/listview_progress"-->
+        <!--android:layout_below="@id/imageView"-->
+        <!--android:layout_marginTop="20dp"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:divider="@null"-->
+        <!--android:dividerHeight="30dp"-->
+        <!--android:fillViewport="true"></ListView>-->
+
+</RelativeLayout>
