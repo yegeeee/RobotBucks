@@ -7,14 +7,12 @@ import android.support.v4.content.ContextCompat;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.util.SparseBooleanArray;
-import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;
-import android.widget.TextView;
 
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
@@ -91,34 +89,31 @@ public class MenuActivity extends AppCompatActivity {
         enter_btn.setOnClickListener(
                 new Button.OnClickListener() {
                     public void onClick(View v) {
-                        et.setOnEditorActionListener(new TextView.OnEditorActionListener() {
-                            @Override
-                            public boolean onEditorAction(TextView textView, int id, KeyEvent keyEvent) {
-                                table_num = Integer.parseInt(et.getText().toString());
-                                switch (table_num) {
-                                    case 1:
-                                        table_info = "table1";
-                                        table_ref = databaseReference.child("table").child("table1");
-                                        break;
-                                    case 2:
-                                        table_info = "table2";
-                                        table_ref = databaseReference.child("table").child("table2");
-                                        break;
-                                    case 3:
-                                        table_info = "table3";
-                                        table_ref = databaseReference.child("table").child("table3");
-                                        break;
-                                }
-                                return false;
-                            }
-                        });
 
- //                       setOrder();
+                        table_num = Integer.parseInt(et.getText().toString());
+
+                        switch (table_num) {
+                            case 1:
+                                table_info = "table1";
+                                table_ref = databaseReference.child("table").child("table1");
+                                break;
+                            case 2:
+                                table_info = "table2";
+                                table_ref = databaseReference.child("table").child("table2");
+                                break;
+                            case 3:
+                                table_info = "table3";
+                                table_ref = databaseReference.child("table").child("table3");
+                                break;
+                        }
+
+                        setOrder();
 
                         listview.clearChoices();
                         adapter.notifyDataSetChanged();
 
                         Intent intent = new Intent(MenuActivity.this, ProgressActivity.class);
+                        intent.putExtra("table_info", table_info);
                         startActivity(intent);
 
                     }
@@ -139,7 +134,6 @@ public class MenuActivity extends AppCompatActivity {
 
         for (int i = 0; i <= count - 1; i++) {
             if (checkedItems.get(i)) {
-                table_ref.child("order").child(Integer.toString(i)).setValue(1);
                 switch (i) {
                     case 0:
                         table_ref.child("order").child("americano").setValue(1);
